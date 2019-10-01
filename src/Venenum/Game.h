@@ -1,6 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include <permissive-fov-1.0/permissive-fov-cpp.h>
+#include <permissive-fov-cpp.h>
 #include <sstream>
 #include "GameContext.h"
 #include "Save.h"
@@ -22,7 +22,7 @@ public:
 		SHOWING_MENU, 
 		CHARACTER_CREATION, 
 		GENERATING_WORLD,
-        PLAYER_TURN,
+    PLAYER_TURN,
 		AI_TURN, 
 		SHOWING_INVENTORY,
 		SHOWING_SPELLS,
@@ -51,7 +51,7 @@ private:
 	void congratulate();
 	void animate(Creature* creature);
 
-    Game::GameState state;
+  Game::GameState state;
 	sf::View mainView;
 	sf::View guiView;
 	struct GameContext context;
