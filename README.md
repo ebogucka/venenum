@@ -1,6 +1,6 @@
 # Venenum
 
-Venenum is a very basic roguelike game. It was originally created for a contest organised by [EXOR Studios](https://www.exorstudios.com/).
+Venenum is a very basic 2D roguelike game. It was originally created for a contest organised by [EXOR Studios](https://www.exorstudios.com/).
 
 Control your character with WASD.
 
@@ -23,7 +23,7 @@ Download [SFML](https://www.sfml-dev.org/). Copy the content of `lib` and `bin` 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Acknowledgments
 
