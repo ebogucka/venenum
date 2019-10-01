@@ -89,12 +89,6 @@
     <ClInclude Include="gameContext.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="permissive-fov-1.0\permissive-fov-cpp.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="permissive-fov-1.0\permissive-fov.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Menu.h">
       <Filter>Header Files</Filter>
     </ClInclude>

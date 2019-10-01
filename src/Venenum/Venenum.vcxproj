@@ -57,7 +57,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../../3rdparty/SFML-2.5.1/include;../../3rdparty;../../3rdparty/boost_1_53_0</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../3rdparty/SFML-2.5.1/include;../../3rdparty/permissive-fov-1.0;../../3rdparty/boost_1_53_0</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -75,7 +75,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../../3rdparty/SFML-2.5.1/include;../../3rdparty;../../3rdparty/boost_1_53_0</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../3rdparty/SFML-2.5.1/include;../../3rdparty/permissive-fov-1.0;../../3rdparty/boost_1_53_0</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -114,8 +114,6 @@
     <ClInclude Include="Menu.h" />
     <ClInclude Include="MenuItem.h" />
     <ClInclude Include="Messenger.h" />
-    <ClInclude Include="permissive-fov-1.0\permissive-fov-cpp.h" />
-    <ClInclude Include="permissive-fov-1.0\permissive-fov.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Save.h" />
     <ClInclude Include="Tile.h" />
