@@ -234,3 +234,5 @@ $RECYCLE.BIN/
 *.exe
 *.dll
 *.lib
+
+lib/
