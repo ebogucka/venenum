@@ -56,7 +56,7 @@ void Player::load(boost::property_tree::ptree& tree)
 
 void Player::loadSprite()
 {
-	std::string image = "images/player.png";
+	std::string image = "../images/player.png";
 	if(!texture.loadFromFile(image))
 	{
 		std::ostringstream msg;
@@ -131,9 +131,9 @@ Creature::MoveResult Player::move(int x, int y)
 
 bool Player::processDeath()
 {
-	remove("data/save.dat");
-	remove("data/map.dat");
-	remove("data/map2.dat");
+	remove("../data/save.dat");
+	remove("../data/map.dat");
+	remove("../data/map2.dat");
 	return true;
 }
 

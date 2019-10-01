@@ -4,7 +4,7 @@
 
 Hud::Hud(GameContext& context) : context(context), messenger(*context.window, font)
 {
-	font.loadFromFile("fonts/sansation.ttf");
+	font.loadFromFile("../fonts/sansation.ttf");
 }
 
 

@@ -1,8 +1,9 @@
 #include "MenuItem.h"
 
 
-MenuItem::MenuItem(std::string label, MenuResult action, int x, int y) : text(label), action(action)
+MenuItem::MenuItem(std::string label, MenuResult action, int x, int y) : action(action)
 {
+  text.setString(label);
 	text.setPosition(x, y);
 }
 

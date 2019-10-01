@@ -8,13 +8,13 @@ Tile::Tile() : type(WALL), monster(-1), item(-1), playerFlag(false), visible(fal
 void Tile::loadTextures(Hud& hud)
 {
 	textures.push_back(new sf::Texture());
-	textures[Tile::FLOOR]->loadFromFile("images/tiles/floor.png");
+	textures[Tile::FLOOR]->loadFromFile("../images/tiles/floor.png");
 
 	textures.push_back(new sf::Texture());
-	textures[Tile::WALL]->loadFromFile("images/tiles/wall.png");
+	textures[Tile::WALL]->loadFromFile("../images/tiles/wall.png");
 
 	textures.push_back(new sf::Texture());
-	textures[Tile::STAIRS]->loadFromFile("images/tiles/stairs.png");
+	textures[Tile::STAIRS]->loadFromFile("../images/tiles/stairs.png");
 }
 
 

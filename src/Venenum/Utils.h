@@ -7,6 +7,6 @@ public:
 	static bool fileExists(const char *filename)
 	{
 	  std::ifstream ifile(filename);
-	  return ifile;
+	  return ifile.is_open();
 	}
 };

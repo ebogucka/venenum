@@ -173,8 +173,8 @@ bool Map::isTilePassable(int x, int y)
 
 void Map::load()
 {
-	std::ifstream mapFile("data/map.dat");
-	std::ifstream discoveredMapFile("data/map2.dat");
+	std::ifstream mapFile("../data/map.dat");
+	std::ifstream discoveredMapFile("../data/map2.dat");
 
 	if(!mapFile)
 	{
@@ -234,8 +234,8 @@ void Map::load()
 
 void Map::save()
 {
-	std::ofstream mapFile("data/map.dat");
-	std::ofstream discoveredMapFile("data/map2.dat");
+	std::ofstream mapFile("../data/map.dat");
+	std::ofstream discoveredMapFile("../data/map2.dat");
 	
 	if(mapFile.is_open() && discoveredMapFile.is_open())
 	{

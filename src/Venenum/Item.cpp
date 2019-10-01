@@ -30,7 +30,7 @@ void Item::loadState(boost::property_tree::ptree& tree, GameContext& context)
 	enum Item::ItemType loadedType = static_cast<Item::ItemType>(tree.get<int>("type"));
 	Item* loadedItem = new Item(loadedType, context, id);
 	loadedItem->setPosition(tree.get<int>("position.x"), tree.get<int>("position.y"));
-	context.items.insert(std::make_pair<int, Item*>(id, loadedItem));
+	context.items.insert(std::make_pair(id, loadedItem));
 }
 
 
@@ -38,7 +38,7 @@ void Item::loadData(GameContext& context)
 {
 	using namespace boost::property_tree;
 	ptree file;
-	read_xml("data/game.dat", file);
+	read_xml("../data/game.dat", file);
 
 	int i = 0;
 	BOOST_FOREACH(ptree::value_type &value, file.get_child("items"))
@@ -46,7 +46,7 @@ void Item::loadData(GameContext& context)
 		Item::data.push_back(new Item::ItemData());
 		Item::data[i]->name = value.second.get<std::string>("name");
 		Item::data[i]->texture = new sf::Texture();
-		Item::data[i]->texture->loadFromFile("images/items/" + value.second.get<std::string>("image"));
+		Item::data[i]->texture->loadFromFile("../images/items/" + value.second.get<std::string>("image"));
 		i++;
 	}
 }

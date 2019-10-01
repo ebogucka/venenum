@@ -24,7 +24,7 @@ void Save::store()
 		it->second->saveState(savefile);
 	}
 	boost::property_tree::xml_writer_settings<char> settings('\t', 1);
-	boost::property_tree::write_xml("data/save.dat", savefile, std::locale(), settings);
+	boost::property_tree::write_xml("../data/save.dat", savefile, std::locale(), settings);
 }
 
 
@@ -33,7 +33,7 @@ void Save::restore()
 	using namespace boost::property_tree;
 	context.map->load();
 	ptree savefile;
-	read_xml("data/save.dat", savefile);
+	read_xml("../data/save.dat", savefile);
 
 	context.floor = savefile.get<int>("game.floor");
 	context.player->load(savefile);

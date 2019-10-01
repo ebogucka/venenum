@@ -11,7 +11,7 @@ Game::Game() : state(Game::UNINITIALIZED), isPlaying(false)
 	context.floor = 0;
 	context.monsters.clear();
 	context.items.clear();
-	FOVmask = new permissive::maskT("data/fov.dat");
+	FOVmask = new permissive::maskT("../data/fov.dat");
 }
 
 
@@ -195,7 +195,7 @@ void Game::showMenu()
 {
 	MainMenu mainMenu(100, 100, 40, *context.window);
 
-	if(Utils::fileExists("data/save.dat") || isPlaying)
+	if(Utils::fileExists("../data/save.dat") || isPlaying)
 	{
 		mainMenu.addItem("Resume Game", MenuItem::RESUME_GAME);
 	}
@@ -301,7 +301,8 @@ void Game::showDeathScreen()
 {
 	sf::sleep(sf::seconds(3));
 	context.window->clear(sf::Color::Black);
-	sf::Text text("YOU DIED");
+  sf::Text text;
+  text.setString("YOU DIED");
 	text.setOrigin(text.getLocalBounds().left + text.getLocalBounds().width / 2, text.getLocalBounds().top + text.getLocalBounds().height / 2);
 	text.setPosition(context.window->getSize().x / 2, context.window->getSize().y / 2);
 	text.setColor(sf::Color::Red);
@@ -325,7 +326,8 @@ void Game::congratulate()
 {
 	sf::sleep(sf::seconds(3));
 	context.window->clear(sf::Color::Black);
-	sf::Text text("Congratulations!");
+  sf::Text text;
+  text.setString("Contratulations!");
 	text.setOrigin(text.getLocalBounds().left + text.getLocalBounds().width / 2, text.getLocalBounds().top + text.getLocalBounds().height / 2);
 	text.setPosition(context.window->getSize().x / 2, context.window->getSize().y / 2 - 100);
 	text.setColor(sf::Color::Green);

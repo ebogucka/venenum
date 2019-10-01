@@ -1,6 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "permissive-fov-1.0/permissive-fov-cpp.h"
+#include <permissive-fov-1.0/permissive-fov-cpp.h>
 #include <sstream>
 #include "GameContext.h"
 #include "Save.h"

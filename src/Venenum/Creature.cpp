@@ -39,7 +39,7 @@ void Creature::loadState(boost::property_tree::ptree& tree, GameContext& context
 	Creature* loadedMonster = new Creature(loadedType, context, id);
 	loadedMonster->setPosition(tree.get<int>("position.x"), tree.get<int>("position.y"));
 	loadedMonster->HP = tree.get<int>("HP");
-	context.monsters.insert(std::make_pair<int, Creature *>(id, loadedMonster));
+	context.monsters.insert(std::make_pair(id, loadedMonster));
 }
 
 
@@ -47,7 +47,7 @@ void Creature::loadData(GameContext& context)
 {
 	using namespace boost::property_tree;
 	ptree file;
-	read_xml("data/game.dat", file);
+	read_xml("../data/game.dat", file);
 
 	int i = 0;
 	BOOST_FOREACH(ptree::value_type &value, file.get_child("monsters"))
@@ -60,7 +60,7 @@ void Creature::loadData(GameContext& context)
 		Creature::data[i]->speed = value.second.get<int>("speed");
 		Creature::data[i]->XPGained = value.second.get<int>("XPGained");
 		Creature::data[i]->texture = new sf::Texture();
-		Creature::data[i]->texture->loadFromFile("images/monsters/" + value.second.get<std::string>("image"));
+		Creature::data[i]->texture->loadFromFile("../images/monsters/" + value.second.get<std::string>("image"));
 		i++;
 	}
 }
