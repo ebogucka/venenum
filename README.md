@@ -2,9 +2,9 @@
 
 Venenum is a very basic roguelike game. It was originally created for a contest organised by [EXOR Studios](https://www.exorstudios.com/).
 
-Control the character with WASD.
+Control your character with WASD.
 
-Combat is turn based (each turn you get 3 action points). You gain XP with each killed monster, and when levelling up happens automatically. When a new turn starts you regenerate a small amount of HP.
+Combat is turn based (each turn you get 3 action points). You gain XP with each killed monster and levelling up happens automatically. When a new turn starts you regenerate a small amount of HP.
 
 The goal is to find an antidote bottle hidden on the deepest level of the dungeon.
 
