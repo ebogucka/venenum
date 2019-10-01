@@ -6,10 +6,10 @@ MainMenu::MainMenu(int x, int y, int itemHeight, sf::RenderWindow& window) : Men
 
 void MainMenu::show()
 {
-	window.clear(sf::Color::Black);
-	for(int i = 0; i < items.size(); i++)
-	{
-		items[i]->draw(window);
-	}
-	window.display();
+    window.clear(sf::Color::Black);
+    for(int i = 0; i < items.size(); i++)
+    {
+        items[i]->draw(window);
+    }
+    window.display();
 }

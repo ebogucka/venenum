@@ -13,11 +13,11 @@ class Item;
 
 struct GameContext
 {
-	sf::RenderWindow* window;
-	Hud* hud;
-	Player* player;
-	Map* map;
-	std::unordered_map<int, Creature*> monsters;
-	std::unordered_map<int, Item*> items;
-	int floor;
+    sf::RenderWindow* window;
+    Hud* hud;
+    Player* player;
+    Map* map;
+    std::unordered_map<int, Creature*> monsters;
+    std::unordered_map<int, Item*> items;
+    int floor;
 };

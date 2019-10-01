@@ -9,24 +9,24 @@ struct GameContext;
 class Hud
 {
 public:
-	Hud(GameContext& context);
-	void draw();
-	void writeMessage(std::ostringstream& msg);
-	void flush();
-	sf::Font font;
+    Hud(GameContext& context);
+    void draw();
+    void writeMessage(std::ostringstream& msg);
+    void flush();
+    sf::Font font;
 
 private:
-	struct
-	{
-		std::string name;
-		std::string level;
-		std::string XP;
-		std::string HP;
-		std::string floor;
-	} playerStatus;
-	GameContext& context;
-	Messenger messenger;
+    struct
+    {
+        std::string name;
+        std::string level;
+        std::string XP;
+        std::string HP;
+        std::string floor;
+    } playerStatus;
+    GameContext& context;
+    Messenger messenger;
 
-	void updatePlayerStatus();
+    void updatePlayerStatus();
 };
 

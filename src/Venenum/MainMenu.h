@@ -5,6 +5,6 @@
 class MainMenu : public Menu
 {
 public:
-	MainMenu(int x, int y, int itemHeight, sf::RenderWindow& window);
-	void show();
+    MainMenu(int x, int y, int itemHeight, sf::RenderWindow& window);
+    void show();
 };

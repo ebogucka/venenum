@@ -13,11 +13,11 @@ class Creature;
 class Save
 {
 public:
-	Save(GameContext& context);
-	void store();
-	void restore();
+    Save(GameContext& context);
+    void store();
+    void restore();
 
 private:
-	GameContext& context;
+    GameContext& context;
 };
 
