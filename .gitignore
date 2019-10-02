@@ -236,3 +236,6 @@ $RECYCLE.BIN/
 *.lib
 
 lib/
+data/map.dat
+data/map2.dat
+data/save.dat
