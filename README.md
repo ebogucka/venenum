@@ -15,7 +15,7 @@ Clone this repo to your local machine:
 git clone https://github.com/ebogucka/venenum.git
 ```
 
-Download [SFML](https://www.sfml-dev.org/). Copy the content of `lib` and `bin` directories to the corresponding ones in the project.
+Download [SFML](https://www.sfml-dev.org/). Copy its `lib` and `bin` directories into the project's main directory.
 
 ## Authors
 
