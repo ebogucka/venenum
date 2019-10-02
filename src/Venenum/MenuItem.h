@@ -17,6 +17,7 @@ public:
     void draw(sf::RenderWindow& window);
     MenuResult getAction();
     void setColor(sf::Color color);
+    void setFont(sf::Font &font);
     bool contains(int x, int y);
 
 private:

@@ -18,6 +18,7 @@ protected:
     std::vector<MenuItem *> items;
     sf::Vector2i position;
     int itemHeight;
-    int activeItem;
+    unsigned int activeItem;
     sf::RenderWindow& window;
+    sf::Font font;
 };

@@ -1,12 +1,16 @@
 #include "Menu.h"
 
 
-Menu::Menu(int x, int y, int itemHeight, sf::RenderWindow& window) : position(x, y), itemHeight(itemHeight), activeItem(0), window(window) {}
+Menu::Menu(int x, int y, int itemHeight, sf::RenderWindow& window)
+    : position(x, y), itemHeight(itemHeight), activeItem(0), window(window)
+{
+    font.loadFromFile("../fonts/sansation.ttf");
+}
 
 
 Menu::~Menu()
 {
-    for(int i = 0; i < items.size(); i++)
+    for(unsigned int i = 0; i < items.size(); i++)
     {
         delete items[i];
     }
@@ -15,7 +19,7 @@ Menu::~Menu()
 
 MenuItem::MenuResult Menu::handleClick(int x, int y)
 {
-    for(int i = 0; i < items.size(); i++)
+    for(unsigned int i = 0; i < items.size(); i++)
     {
         if(items[i]->contains(x, y))
         {
@@ -29,7 +33,7 @@ MenuItem::MenuResult Menu::handleClick(int x, int y)
 
 void Menu::handleHover(int x, int y)
 {
-    for(int i = 0; i < items.size(); i++)
+    for(unsigned int i = 0; i < items.size(); i++)
     {
         if(items[i]->contains(x, y))
         {
@@ -89,13 +93,15 @@ MenuItem::MenuResult Menu::getMenuResponse()
 
 void Menu::addItem(std::string label, MenuItem::MenuResult action)
 {
-    items.push_back(new MenuItem(label, action, position.x, position.y + items.size() * itemHeight));
+    MenuItem* item = new MenuItem(label, action, position.x, position.y + items.size() * itemHeight);
+    item->setFont(font);
+    items.push_back(item);
 }
 
 
 void Menu::update()
 {
-    for(int i = 0; i < items.size(); i++)
+    for(unsigned int i = 0; i < items.size(); i++)
     {
         if(i == activeItem)
         {

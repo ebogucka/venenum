@@ -4,7 +4,7 @@
 MenuItem::MenuItem(std::string label, MenuResult action, int x, int y) : action(action)
 {
     text.setString(label);
-    text.setPosition(x, y);
+    text.setPosition((float) x, (float) y);
 }
 
 
@@ -22,11 +22,16 @@ MenuItem::MenuResult MenuItem::getAction()
 
 void MenuItem::setColor(sf::Color color)
 {
-    text.setColor(color);
+    text.setFillColor(color);
+}
+
+void MenuItem::setFont(sf::Font & font)
+{
+    text.setFont(font);
 }
 
 
 bool MenuItem::contains(int x, int y)
 {
-    return text.getGlobalBounds().contains(x, y);
+    return text.getGlobalBounds().contains((float) x, (float) y);
 }
