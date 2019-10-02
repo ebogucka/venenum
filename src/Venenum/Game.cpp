@@ -253,7 +253,7 @@ void Game::generateLevel()
     std::ostringstream msg;
     msg << context.player->getName() << " reaches " << context.floor << " floor.";
     context.hud->writeMessage(msg);
-    int nMonsters = rand() % 31 + 20;
+    unsigned int nMonsters = rand() % 31 + 20;
     while(context.monsters.size() < nMonsters)
     {
         Creature::CreatureType monsterType = static_cast<Creature::CreatureType>(rand() % 5 + (context.floor-1) * 2);
@@ -304,8 +304,8 @@ void Game::showDeathScreen()
     sf::Text text;
     text.setString("YOU DIED");
     text.setOrigin(text.getLocalBounds().left + text.getLocalBounds().width / 2, text.getLocalBounds().top + text.getLocalBounds().height / 2);
-    text.setPosition(context.window->getSize().x / 2, context.window->getSize().y / 2);
-    text.setColor(sf::Color::Red);
+    text.setPosition((float) context.window->getSize().x / 2, (float) context.window->getSize().y / 2);
+    text.setFillColor(sf::Color::Red);
     context.window->draw(text);
     context.window->display();
 
@@ -329,8 +329,8 @@ void Game::congratulate()
     sf::Text text;
     text.setString("Contratulations!");
     text.setOrigin(text.getLocalBounds().left + text.getLocalBounds().width / 2, text.getLocalBounds().top + text.getLocalBounds().height / 2);
-    text.setPosition(context.window->getSize().x / 2, context.window->getSize().y / 2 - 100);
-    text.setColor(sf::Color::Green);
+    text.setPosition((float) context.window->getSize().x / 2, (float) context.window->getSize().y / 2 - 100);
+    text.setFillColor(sf::Color::Green);
     context.window->draw(text);
     text.setString("You have found the antidotum you were looking for for!");
     text.setOrigin(text.getLocalBounds().left + text.getLocalBounds().width / 2, text.getLocalBounds().top + text.getLocalBounds().height / 2);

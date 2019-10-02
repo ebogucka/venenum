@@ -16,7 +16,7 @@ class Creature;
 class Game
 {
 public:
-    static enum GameState
+    enum GameState
     {
         UNINITIALIZED,
         SHOWING_MENU, 

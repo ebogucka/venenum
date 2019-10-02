@@ -29,7 +29,7 @@ void Player::save(boost::property_tree::ptree& tree)
     tree.put("game.player.level", level);
     tree.put("game.player.XP", XP);
     tree.put("game.player.inventory", "");
-    for(int i = 0; i < inventory.size(); i++)
+    for(unsigned int i = 0; i < inventory.size(); i++)
     {
         tree.put("game.player.inventory.item", inventory[i]);
     }
@@ -208,7 +208,7 @@ void Player::levelUp()
 {
     STR = STR + 2;
     DEX = DEX + 2;
-    maxHP = maxHP * 1.50;
+    maxHP = (int) (maxHP * 1.50);
     HP = maxHP;
     level++;
     XPToNextLvl = level * Player::XP_MULTIPLIER;

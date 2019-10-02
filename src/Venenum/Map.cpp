@@ -48,7 +48,7 @@ void Map::generate()
         Room newRoom = Room(roomX, roomY, roomWidth, roomHeight);
 
         bool failed = false;
-        for(int j = 0; j < rooms.size(); j++)
+        for(unsigned int j = 0; j < rooms.size(); j++)
         {
             if(newRoom.intersects(rooms[j]))
             {

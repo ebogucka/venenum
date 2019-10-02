@@ -7,8 +7,8 @@ class Combat
 public:
     static int calculateDamage(int ATK, int DEF)
     {
-        int damage = ((double) rand() / (RAND_MAX)) * ATK;
-        if(damage > ((double) rand() / (RAND_MAX)) * DEF)
+        int damage = (rand() / RAND_MAX) * ATK;
+        if(damage > (rand() / RAND_MAX) * DEF)
         {
             return damage;
         }

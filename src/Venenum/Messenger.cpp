@@ -7,8 +7,8 @@ Messenger::Messenger(sf::RenderWindow& window, sf::Font& font) : window(window),
         texts[i].setFont(font);
         texts[i].setCharacterSize(12);
         texts[i].setStyle(sf::Text::Regular);
-        texts[i].setColor(sf::Color::White);
-        texts[i].setPosition(0.0, 450 + (messages.size() * LINE_HEIGHT));
+        texts[i].setFillColor(sf::Color::White);
+        texts[i].setPosition(0.0, 450 + ((float) messages.size() * LINE_HEIGHT));
         messages.push_back("");
     }
     background.setSize(sf::Vector2f(300, 150));
@@ -29,7 +29,7 @@ void Messenger::display()
 {
     scroll();
     window.draw(background);
-    for(int i = 0; i < messages.size(); i++)
+    for(unsigned int i = 0; i < messages.size(); i++)
     {
         window.draw(texts[i]);
     }
@@ -42,7 +42,7 @@ void Messenger::scroll()
     {
         messages.pop_front();
     }
-    for(int i = 0; i < messages.size(); i++)
+    for(unsigned int i = 0; i < messages.size(); i++)
     {
         texts[i].setString(messages[i]);
     }
