@@ -23,7 +23,31 @@ Download [SFML](https://www.sfml-dev.org/). Copy its `lib` and `bin` directories
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+Venenum is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+However, Venenum includes several third-party Open-Source libraries and resources which are licensed under their own respective Open-Source licenses.
+
+### Libraries and resources directly included in Venenum
+
+#### Boost
+
+License: [Boost Software License - Version 1.0](3rdparty/boost_1_53_0/LICENSE_1_0.txt)
+
+#### permissive-fov
+
+License: [BSD 3-Clause](3rdparty/permissive-fov-1.0/LICENSE.txt)
+
+#### SFML
+
+License: [zlib/libpng](3rdparty/SFML-2.5.1/license.md)
+
+#### Sansation font
+
+License: [SIL Open Font](fonts/LICENSE.md)
+
+#### Crawl tiles
+
+License: [CC Zero](images/LICENSE.txt)
 
 ## Acknowledgments
 
