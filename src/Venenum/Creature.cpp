@@ -182,7 +182,7 @@ bool Creature::attack(Creature* defender)
     }
     else
     {
-            msg << name << " misses!";
+        msg << name << " misses!";
     }
     context.hud->writeMessage(msg);
     if(defender->isDead())

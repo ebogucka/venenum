@@ -4,7 +4,9 @@
 
 Game::Game() : state(Game::UNINITIALIZED), isPlaying(false)
 {
-    context.window = new sf::RenderWindow(sf::VideoMode::getFullscreenModes()[0], "Venenum", sf::Style::Fullscreen);
+    context.window = new sf::RenderWindow(sf::VideoMode::getFullscreenModes()[0], 
+                                          "Venenum", 
+                                          sf::Style::Fullscreen);
     context.hud = new Hud(context);
     context.map = new Map(context);
     context.player = new Player(context);
