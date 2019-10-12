@@ -95,6 +95,7 @@ void Menu::addItem(std::string label, MenuItem::MenuResult action)
 {
     MenuItem* item = new MenuItem(label, action, position.x, position.y + items.size() * itemHeight);
     item->setFont(font);
+    item->setCharacterSize(60);
     items.push_back(item);
 }
 

@@ -5,15 +5,12 @@ Messenger::Messenger(sf::RenderWindow& window, sf::Font& font) : window(window),
     for(int i = 0; i < MAX_LINES; i++)
     {
         texts[i].setFont(font);
-        texts[i].setCharacterSize(12);
+        texts[i].setCharacterSize(26);
         texts[i].setStyle(sf::Text::Regular);
         texts[i].setFillColor(sf::Color::White);
-        texts[i].setPosition(0.0, 450 + ((float) messages.size() * LINE_HEIGHT));
+        texts[i].setPosition(20, window.getSize().y - ((float) messages.size() * LINE_HEIGHT) - 100);
         messages.push_back("");
     }
-    background.setSize(sf::Vector2f(300, 150));
-    background.setFillColor(sf::Color(0, 0, 0, 150));
-    background.setPosition(0, 450);
 }
 
 

@@ -14,22 +14,23 @@ void Hud::draw()
     updatePlayerStatus();
     sf::Text playerInfo;
     playerInfo.setFont(font);
-    playerInfo.setCharacterSize(15);
-    playerInfo.setPosition(0, 0);
-    playerInfo.setString(playerStatus.name);
-    context.window->draw(playerInfo);
-    playerInfo.move(0, 20);
-    playerInfo.setString(playerStatus.level);
-    context.window->draw(playerInfo);
-    playerInfo.move(0, 20);
-    playerInfo.setString(playerStatus.XP);
-    context.window->draw(playerInfo);
-    playerInfo.move(0, 20);
-    playerInfo.setString(playerStatus.HP);
-    context.window->draw(playerInfo);
-    playerInfo.move(0, 20);
-    playerInfo.setString(playerStatus.floor);
-    context.window->draw(playerInfo);
+    playerInfo.setCharacterSize(32);
+    playerInfo.setPosition(20, 20);
+
+    std::vector<std::string> texts = {
+        playerStatus.name,
+        playerStatus.level,
+        playerStatus.XP,
+        playerStatus.HP,
+        playerStatus.floor
+    };
+    
+    for each(std::string text in texts) 
+    {
+        playerInfo.move(0, 40);
+        playerInfo.setString(text);
+        context.window->draw(playerInfo);
+    }
 }
 
 

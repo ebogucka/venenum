@@ -30,6 +30,10 @@ void MenuItem::setFont(sf::Font & font)
     text.setFont(font);
 }
 
+void MenuItem::setCharacterSize(int size)
+{
+    text.setCharacterSize(size);
+}
 
 bool MenuItem::contains(int x, int y)
 {

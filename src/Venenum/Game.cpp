@@ -4,7 +4,7 @@
 
 Game::Game() : state(Game::UNINITIALIZED), isPlaying(false)
 {
-    context.window = new sf::RenderWindow(sf::VideoMode(800, 600), "Venenum", sf::Style::Titlebar);
+    context.window = new sf::RenderWindow(sf::VideoMode::getFullscreenModes()[0], "Venenum", sf::Style::Fullscreen);
     context.hud = new Hud(context);
     context.map = new Map(context);
     context.player = new Player(context);
@@ -193,7 +193,7 @@ void Game::updateView()
 
 void Game::showMenu()
 {
-    MainMenu mainMenu(100, 100, 40, *context.window);
+    MainMenu mainMenu(100, 100, 80, *context.window);
 
     if(Utils::fileExists("../data/save.dat") || isPlaying)
     {

@@ -14,7 +14,7 @@ public:
 
 private:
     static const int MAX_LINES = 10;
-    static const int LINE_HEIGHT = 15;
+    static const int LINE_HEIGHT = 20;
     sf::RenderWindow& window;
     sf::Font& font;
     std::deque<std::string> messages;

@@ -18,6 +18,7 @@ public:
     MenuResult getAction();
     void setColor(sf::Color color);
     void setFont(sf::Font &font);
+    void setCharacterSize(int size);
     bool contains(int x, int y);
 
 private:
